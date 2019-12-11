@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@import "~materialize-css/sass/components/mixins";
+@import "~materialize-css/sass/components/mixins";
+
+// all colors:
+// @import "~materialize-css/sass/components/color";
+
+// BEGIN: only specific colors
+@import "~vue-materialize/sass/color";
+
+// include colors you need
+$primary-color: color("materialize-bleu", "lighten-2") !default;
+$primary-color-light: true !default;
+$primary-color-dark: true !default;
+@if not $primary-color-light {
+  $primary-color-light: lighten($primary-color, 15%);
+}
+@if not $primary-color-dark {
+  $primary-color-dark: darken($primary-color, 15%);
+}
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+
+$link-color: color("light-blue", "darken-1") !default;
+/*.indigo-prevent {
+  @extend .indigo,.darken-4;
+}
+.cyn-prevent{
+  @extend .cyan , .darken-3;
+}
+.grey-light{
+  @extend .grey,.lighten-4;
+}
+.grey-continu{
+  @extend .grey,.lighten-3;
+}
+.grey-active{
+  @extend .grey,.lighten-2;
+}
+.dart-light{
+  @extend .ight-blue,.darken-4;
+}*/
+@include do("include-color","black", "base");
+@include do("include-color","white", "base");
+@import "~vue-materialize/sass/colorProcessor";
+// END: only specific colors
+
+@import "~materialize-css/sass/components/variables";
+@import "~materialize-css/sass/components/normalize";
+@import "~materialize-css/sass/components/typography";
+@import "~materialize-css/sass/components/global";
+
+// modify variables here
+// all available sass variables:
+// https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss
+// e.g. $dropdown-bg-color: black;
+
+// css only, no JS needed for these
+// activate only what you need
+$roboto-font-path: "~materialize-css/fonts/roboto/";
+@import "~materialize-css/sass/components/roboto";
+@import "~materialize-css/sass/components/icons-material-design"; // icons are no long included in materializeCSS
+@import "~materialize-css/sass/components/buttons";
+@import "~materialize-css/sass/components/grid";
+@import "~materialize-css/sass/components/navbar";
+@import "~materialize-css/sass/components/preloader";
+@import "~vue-materialize/sass/forms";
+
+// css for js modules
+// activate only what you need
+@import "~materialize-css/sass/components/cards";
+@import "~materialize-css/sass/components/sideNav";
+@import "~materialize-css/sass/components/dropdown";
+@import "~materialize-css/sass/components/modal";
+@import "~materialize-css/sass/components/collapsible";
+@import "~materialize-css/sass/components/table_of_contents"; // scrollspy
+@import "~materialize-css/sass/components/forms/input-fields";
+// ----- no js but need to be after input-fields
+@import "~materialize-css/sass/components/forms/checkboxes";
+@import "~materialize-css/sass/components/forms/radio-buttons";
+// -----
+@import "~materialize-css/sass/components/forms/switches";
+@import "~materialize-css/sass/components/forms/select"; // need to be after input-fields
+@import "~materialize-css/sass/components/toast";
+@import "~materialize-css/sass/components/tooltip";
+
+// NOT implemented yet:
+@import "~materialize-css/sass/components/tabs";
+@import "~materialize-css/sass/components/slider";
+@import "~materialize-css/sass/components/date_picker/default";
+@import "~materialize-css/sass/components/date_picker/default.date";
+@import "~materialize-css/sass/components/date_picker/default.time";
+@import "~materialize-css/sass/components/forms/file-input";
+@import "~materialize-css/sass/components/forms/range";

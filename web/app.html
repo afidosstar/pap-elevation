@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css"/>
+</head>
+<body>
+<header id="bar-system">
+    <table style="height: 30px!important;">
+        <tr>
+            <th id="logo" ><i class="fa-apple"></i></th>
+            <th id="title">Login</th>
+            <th id="system-action" >
+                <span class="btn-sys" id="window-minimize" @click="windowMinimize"><i class="fa fa-minus"></i></span>
+                <span class="btn-sys" id="window-maximize" @click="windowMaximize"><i class="fa fa-square-o"></i></span>
+                <span class="btn-sys" id="window-close" @click="windowClose"><i class="fa fa-close" ></i></span>
+            </th>
+        </tr>
+    </table>
+</header>
+    <main id="app">
+            <router-view class="view"></router-view>
+    </main>
+<footer>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/dist/build.js"></script>
+    <script src="/dist/app.js"></script>
+</footer>
+</body>
+</html>
