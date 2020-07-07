@@ -9,7 +9,7 @@
   "author": "AYEDOUN Dossou Fiacre",
   "license": "ISC",
   "dependencies": {
-    "electron": "^1.4.12",
+    "electron": "^9.1.0",
     "electron-json-storage": "^2.1.0",
     "electron-storage": "^1.0.7",
     "firebase": "^3.6.4",
